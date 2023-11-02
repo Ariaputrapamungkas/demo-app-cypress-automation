@@ -2,9 +2,9 @@ describe("template spec", () => {
   //before eazh test case
   beforeEach(() =>{
     //reset database using cypress command
-    //cy.exec(
-      //"cd ../demo-app-cypress-automation && php artisan migrate:fresh --seed"
-    //);
+    cy.exec(
+      "cd ../demo-app-cypress-automation && php artisan migrate:fresh --seed"
+    );
     
     //arrange
     cy.visit('http://127.0.0.1:8000/');

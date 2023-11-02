@@ -8,15 +8,12 @@ describe("template spec", () => {
   afterEach(() => {
     cy.log("runs after each tests in the block");
   });
-  //before eazh test case
+  //before each test case
   beforeEach(() =>{
     //arrange
     cy.visit('http://127.0.0.1:8000/');
     //reset database using cypress command
-    cy.exec(
-      "cd ../demo-app-cypress-automation && php artisan migrate:fresh --seed"
-      
-    );
+    cy.exec("php artisan migrate:fresh --seed");
     //act
     cy.get(':nth-child(2) > .form-control').type('superadmin@gmail.com');
     cy.get(':nth-child(3) > .form-control').type('password');

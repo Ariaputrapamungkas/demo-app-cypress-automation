@@ -3,7 +3,7 @@ describe('User Can EditExisting Data', () => {
     //reset database using cypress command
     //cy.exec("cd ../demo-app-cypress-automation && php artisan migrate:fresh --seed");
     //arrange
-  cy.visit('hhttp://127.0.0.1:8000/');
+  cy.visit('http://127.0.0.1:8000/');
   //act
   cy.get(':nth-child(2) > .form-control').type('superadmin@gmail.com');
   cy.get(':nth-child(3) > .form-control').type('password');
